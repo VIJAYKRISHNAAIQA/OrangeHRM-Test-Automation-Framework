@@ -262,28 +262,79 @@ git commit -m "TEST: Add login validation tests"
 git push origin test/login-validation
 ```
 
-### Create Pull Request (PR)
-
-1.Navigate to GitHub → **Pull Requests** → **New Pull Request*
-2.Select `test/login-validation` as the compare branch and `main` as the base branc
-3.Add reviewers (e.g., Developer, Senior QA
-4.PR Title: `QA: Login Validation Tests for OrangeHRM
-5.Provide a detailed description
-   -**Purpose**: Validate login functionality with various credential scenario
-   -**Test Cases**
-     - Valid username and password
-     - Invalid username
-     - Invalid password
-     - Empty fields
-   -**Test Data**
-     - Valid Credentials: `Admin` / `admin123`
-     - Invalid Credentials: `InvalidUser` / `InvalidPass`
-   -**Test Results**
-     - All tests passed successfully on local environment
-     - Screenshots attached for failed scenarios
-
-6.Link related issues or user stories, if applicabl
-7.Submit the pull request for revie
+A well-structured guide for creating a Pull Request (PR) in your QA automation project, focusing on login validation tests for OrangeHRM:
 
 ---
-By following this workflow, QA engineers can ensure that their test cases are properly integrated into the project, reviewed by peers, and maintained in a structured manner
+
+## 🚀 Creating a Pull Request (PR) for Login Validation Tests
+
+### 🛠️ Prerequisites
+
+Ensure you've completed the following steps:
+
+```bash
+# Create and switch to a new branch
+git checkout -b test/login-validation
+
+# Stage and commit your changes
+git add src/test/java/com/orangehrm/tests/LoginTest.java
+git commit -m "TEST: Add login validation tests"
+
+# Push the branch to the remote repository
+git push origin test/login-validation
+```
+
+---
+
+### 🔄 Steps to Create a Pull Request
+
+1. **Navigate to GitHub**: Go to your repository on GitHub.
+
+2. **Initiate a New Pull Request**:
+   - Click on the **"Pull Requests"** tab.
+   - Click the **"New Pull Request"** button.
+
+3. **Select Branches**:
+   - **Base Branch**: `main`
+   - **Compare Branch**: `test/login-validation`
+
+4. **Add Reviewers**:
+   - Assign relevant team members, such as Developers and Senior QA Engineers, to review the PR.
+
+5. **Set the PR Title**:
+   - Use a clear and descriptive title, e.g., `QA: Login Validation Tests for OrangeHRM`.
+
+6. **Provide a Detailed Description**:
+
+   **Purpose**:
+   > Validate the login functionality of OrangeHRM with various credential scenarios to ensure robust authentication mechanisms.
+
+   **Test Cases**:
+   - ✅ Valid username and password
+   - ❌ Invalid username
+   - ❌ Invalid password
+   - ❌ Empty username and password fields
+
+   **Test Data**:
+   - **Valid Credentials**:
+     - Username: `Admin`
+     - Password: `admin123`
+   - **Invalid Credentials**:
+     - Username: `InvalidUser`
+     - Password: `InvalidPass`
+
+   **Test Results**:
+   - All tests executed successfully in the local environment.
+   - Attached screenshots for failed scenarios to assist in debugging.
+
+7. **Link Related Issues or User Stories**:
+   - If applicable, link to relevant issues or user stories to provide context.
+
+8. **Submit the Pull Request**:
+   - Click the **"Create Pull Request"** button to submit your PR for review.
+
+---
+
+By following this structured approach, QA engineers can ensure their test cases are effectively integrated into the project, facilitating thorough reviews and maintaining code quality.
+
+--- 
